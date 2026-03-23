@@ -1,0 +1,452 @@
+/* =============================================
+   HELP PAGE — matches HealSphere design system
+   ============================================= */
+
+.help-page {
+    background: var(--white);
+    font-family: var(--font);
+    color: var(--gray-900);
+}
+
+/* ─── Hero ─── */
+.help-hero {
+    position: relative;
+    background: linear-gradient(165deg, rgba(240, 253, 250, 0.8) 0%, rgba(255, 255, 255, 0.95) 100%);
+    padding: 80px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.help-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/friendly_support_team_bg.png') no-repeat center 20%/cover;
+    opacity: 0.05;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.help-hero__text {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.help-hero__title {
+    margin-bottom: 24px;
+}
+
+.help-hero__sub {
+    margin: 0 auto 36px;
+    color: var(--gray-600);
+}
+
+/* Browser illustration */
+.help-hero__visual {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 500px;
+    height: 240px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.help-browser {
+    background: var(--white);
+    border-radius: 14px 14px 0 0;
+    box-shadow: var(--shadow-xl);
+    width: 360px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--gray-100);
+}
+
+.help-browser__bar {
+    background: var(--gray-50);
+    padding: 10px 14px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot--red {
+    background: #f87171;
+}
+
+.dot--yellow {
+    background: #fcd34d;
+}
+
+.dot--green {
+    background: #34d399;
+}
+
+.help-browser__body {
+    height: 200px;
+    background: url('../assets/friendly_support_team_bg.png') no-repeat center/cover;
+    position: relative;
+    border-radius: 0 0 14px 14px;
+}
+
+.help-browser__body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13, 148, 136, 0.15), transparent);
+}
+
+.help-browser__line {
+    height: 11px;
+    border-radius: 6px;
+    background: var(--gray-100);
+}
+
+.l--full {
+    width: 80%;
+}
+
+.l--med {
+    width: 60%;
+}
+
+.l--teal {
+    width: 45%;
+    background: #ccfbf1;
+}
+
+.help-blob {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.b1 {
+    width: 80px;
+    height: 80px;
+    background: var(--teal);
+    opacity: 0.15;
+    right: 55px;
+    bottom: 16px;
+}
+
+.b2 {
+    width: 50px;
+    height: 50px;
+    background: var(--teal-light);
+    opacity: 0.2;
+    right: 28px;
+    bottom: 64px;
+}
+
+/* ─── Support Cards ─── */
+.help-cards-section {
+    padding: 64px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.help-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.help-support-card {
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('../assets/friendly_support_team_bg.png') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.help-support-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--teal-gradient);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.help-support-card:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../assets/friendly_support_team_bg.png') no-repeat center/cover;
+}
+
+.help-support-card:hover::before {
+    opacity: 1;
+}
+
+.help-support-card__icon {
+    width: 52px;
+    height: 52px;
+    background: #f0fdfa;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.help-support-card:hover .help-support-card__icon {
+    background: var(--teal);
+    transform: scale(1.08);
+}
+
+.help-support-card:hover .help-support-card__icon svg path,
+.help-support-card:hover .help-support-card__icon svg circle,
+.help-support-card:hover .help-support-card__icon svg rect {
+    stroke: var(--white);
+}
+
+.help-support-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-900);
+    letter-spacing: -0.01em;
+}
+
+.help-support-card__desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.help-support-card__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.help-support-card__link:hover {
+    color: var(--teal-dark);
+    text-decoration: underline;
+}
+
+/* ─── Section Shared ─── */
+.help-section-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.help-section-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.help-section-sub {
+    font-size: 15px;
+    color: var(--gray-500);
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+
+/* ─── Popular Searches ─── */
+.help-searches-section {
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 64px 32px;
+}
+
+.help-searches-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    text-align: left;
+}
+
+.help-search-pill {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    font-size: 14px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.45;
+    transition: all 0.2s;
+}
+
+.help-search-pill:hover {
+    background: #f0fdfa;
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.help-search-pill.active {
+    background: #f0fdfa;
+    border-color: var(--teal);
+    color: var(--teal);
+    font-weight: 600;
+}
+
+/* ─── FAQ ─── */
+.help-faq-section {
+    padding: 64px 32px;
+}
+
+.help-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.help-faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.help-faq-item:hover,
+.help-faq-item.open {
+    border-color: var(--teal);
+    box-shadow: var(--shadow-md);
+}
+
+.help-faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.help-faq-chevron {
+    flex-shrink: 0;
+    color: var(--teal);
+    transition: transform 0.25s;
+}
+
+.help-faq-item.open .help-faq-chevron {
+    transform: rotate(180deg);
+}
+
+.help-faq-a {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--gray-100);
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.7;
+    animation: fadeSlide 0.2s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── CTA ─── */
+.help-cta-section {
+    background: var(--teal-gradient);
+    padding: 72px 32px;
+}
+
+.help-cta-inner {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.help-cta-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-cta-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.help-cta-sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.65;
+}
+
+/* Standardized button hover handled by global classes */
+
+.help-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+    .help-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .help-hero__title {
+        font-size: 26px;
+    }
+
+    .help-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .help-searches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .help-cards-section,
+    .help-searches-section,
+    .help-faq-section,
+    .help-cta-section {
+        padding: 48px 20px;
+    }
+}

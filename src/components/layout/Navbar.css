@@ -1,0 +1,196 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+}
+
+.navbar__brand-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar__back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-200);
+    background: white;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.navbar__back-btn:hover {
+    background: var(--gray-50);
+    color: var(--teal);
+    border-color: var(--teal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar__back-btn svg {
+    font-size: 14px;
+}
+
+.navbar__logo {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.navbar__med {
+    color: var(--gray-900);
+}
+
+.navbar__hub {
+    color: var(--teal);
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar__link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.navbar__link:hover {
+    color: var(--teal);
+    background: rgba(13, 148, 136, 0.06);
+}
+
+.navbar__link.navbar__link--active {
+    background: var(--teal);
+    color: var(--white) !important;
+}
+
+.navbar__dropdown-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar__account-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+}
+
+.navbar__account-btn:hover {
+    color: var(--teal);
+    background: rgba(13, 148, 136, 0.06);
+}
+
+/* ── Account Dropdown ── */
+.navbar__dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 200px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+    padding: 8px;
+    z-index: 9999;
+    animation: dropdownFade 0.15s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar__dropdown-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-400);
+    padding: 6px 12px 4px;
+}
+
+.navbar__dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-700);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    transition: background 0.15s, color 0.15s;
+    text-align: left;
+}
+
+.navbar__dropdown-item:hover {
+    background: #f0fdfa;
+    color: var(--teal);
+}
+
+.navbar__dropdown-item--danger {
+    color: #ef4444;
+}
+
+.navbar__dropdown-item--danger:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}

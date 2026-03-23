@@ -1,0 +1,47 @@
+.doctor-cta {
+    padding: 64px 48px;
+    background: var(--white);
+}
+
+.doctor-cta__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--teal-gradient);
+    border-radius: var(--radius-lg);
+    padding: 64px 32px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 10px 30px rgba(227, 87, 106, 0.2);
+}
+
+.doctor-cta__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.doctor-cta__text {
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.doctor-cta__btn {
+    background: var(--white);
+    color: #000000;
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doctor-cta__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

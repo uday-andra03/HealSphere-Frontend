@@ -1,0 +1,285 @@
+/* Professional Auth Design - Split Screen Slider Mode */
+:root {
+  --auth-primary: #26d6e7;
+  --auth-accent: #43d3e6;
+  --auth-bg-gradient: linear-gradient(135deg, #09c2c8 0%, #0dcfc8 100%);
+  --auth-card-bg: #ffffff;
+  --auth-text-main: #4dd1e2;
+  --auth-text-muted: #64748b;
+  --auth-border: #e2e8f0;
+  --auth-input-focus: #1ad3da;
+}
+
+.registration-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  padding: 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.auth-container {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 700px;
+  background: var(--auth-card-bg);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
+.auth-sidebar {
+  flex: 0.8;
+  background: var(--auth-bg-gradient);
+  color: white;
+  padding: 60px 100px 60px 50px;
+  /* Increased right padding to account for content overlap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.sidebar-logo {
+  font-size: 80px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+.sidebar-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-description {
+  opacity: 0.9;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* Form Content Styling */
+.auth-content {
+  flex: 1.2;
+  padding: 60px;
+  background: white;
+  position: relative;
+  /* Specific curve into the sidebar */
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-left: -60px;
+  z-index: 10;
+}
+
+.auth-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.auth-title-section h2 {
+  font-size: 28px;
+  color: var(--auth-text-main);
+  margin-bottom: 8px;
+}
+
+/* Pill Toggle Slider */
+.pill-toggle {
+  display: flex;
+  background: #9beef0;
+  padding: 4px;
+  border-radius: 30px;
+  gap: 4px;
+}
+
+.pill-item {
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: #94a3b8;
+  background: transparent;
+}
+
+.pill-item.active {
+  background: white;
+  color: #06a2c9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--auth-text-muted);
+}
+
+/* Method Toggle (Email/Phone) */
+.method-toggle {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.method-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--auth-border);
+  background: #f8fafc;
+  color: var(--auth-text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.method-btn.active {
+  background: #3cd2d7;
+  color: white;
+  border-color: #3cd2d7;
+  box-shadow: 0 4px 10px rgba(60, 210, 215, 0.2);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 18px;
+  background: #f8fafc;
+  border: 1.5px solid var(--auth-border);
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--auth-input-focus);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(27, 215, 235, 0.1);
+}
+
+/* Radio Buttons Styling */
+.gender-selection {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--auth-text-main);
+}
+
+.radio-group input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #1bc4d0;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #2fedf4;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(40, 196, 217, 0.3);
+}
+
+.auth-footer {
+  margin-top: 24px;
+}
+
+.auth-toggle-link {
+  color: #011212;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .auth-sidebar {
+    padding: 40px 20px;
+  }
+
+  .sidebar-logo {
+    font-size: 50px;
+  }
+
+  .sidebar-title {
+    font-size: 32px;
+  }
+
+  .auth-content {
+    margin-left: 0;
+    border-radius: 0;
+    padding: 40px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-header-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}

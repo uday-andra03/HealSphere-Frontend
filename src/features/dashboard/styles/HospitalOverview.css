@@ -1,0 +1,81 @@
+/* ===== Hospital Overview ===== */
+
+.hospital-overview-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 30px;
+    margin-top: 24px;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow-md);
+}
+
+.hospital-overview-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--gray-900);
+    letter-spacing: -0.02em;
+}
+
+.hospital-table-wrapper {
+    overflow-x: auto;
+}
+
+.hospital-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hospital-table th {
+    text-align: left;
+    padding: 16px 12px;
+    color: var(--gray-400);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.hospital-table td {
+    padding: 18px 10px;
+    font-size: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hospital-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.hospital-name {
+    font-weight: 500;
+}
+
+.hospital-location {
+    color: #64748b;
+}
+
+.hospital-rating {
+    color: #f59e0b;
+    font-weight: 500;
+}
+
+/* Status badge */
+
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.excellent {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status.good {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+}

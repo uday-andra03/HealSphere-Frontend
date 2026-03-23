@@ -1,0 +1,72 @@
+/* ===== Hospital Overview ===== */
+
+.hospital-overview-card {
+  background: #f3f4f6;
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.hospital-overview-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.hospital-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hospital-table th {
+  text-align: left;
+  padding: 14px 10px;
+  color: #6b7280;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hospital-table td {
+  padding: 18px 10px;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hospital-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.hospital-name {
+  font-weight: 500;
+}
+
+.hospital-location {
+  color: #64748b;
+}
+
+.hospital-rating {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+/* Status badge */
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.excellent {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.good {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}

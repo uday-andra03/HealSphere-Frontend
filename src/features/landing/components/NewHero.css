@@ -1,0 +1,161 @@
+/* New Hero */
+.new-hero {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* New Overlay */
+.new-overlay {
+    min-height: 100vh;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.45) 40%,
+            rgba(0, 0, 0, 0.1) 80%);
+    display: flex;
+    align-items: center;
+}
+
+/* New Content */
+.new-hero-content {
+    color: white;
+    max-width: 650px;
+    margin-left: 70px;
+    padding: 20px;
+}
+
+/* New Badge */
+.new-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    backdrop-filter: blur(6px);
+}
+
+/* Standardized styles handled by global utility classes */
+
+.new-gradient {
+    background: linear-gradient(90deg, #3dd5c0, #7ce7d8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.new-gradient2 {
+    background: linear-gradient(90deg, #ff7a5c, #ffb199);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Standardized styles handled by global utility classes */
+
+/* Search Bar */
+.new-search-bar {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    max-width: 460px;
+}
+
+.new-search-icon {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.new-search-bar input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+/* Standardized styles handled by global utility classes */
+
+/* Info */
+.new-hero-info {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    opacity: 0.9;
+    flex-wrap: wrap;
+}
+
+.new-reg-btn {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.new-reg-btn:hover {
+    background-color: var(--teal-dark);
+}
+
+/* ========================= */
+/* ✅ Tablet */
+@media (max-width: 992px) {
+    .new-hero-content {
+        margin-left: 40px;
+    }
+
+    .new-hero-content h1 {
+        font-size: 48px;
+    }
+}
+
+/* ========================= */
+/* ✅ Mobile */
+@media (max-width: 600px) {
+    .new-overlay {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .new-hero-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .new-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .new-hero-content p {
+        font-size: 15px;
+    }
+
+    .new-search-bar {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .new-search-bar input {
+        width: 100%;
+    }
+
+    .new-search-bar button {
+        width: 100%;
+    }
+
+    .new-hero-info {
+        justify-content: center;
+        font-size: 13px;
+    }
+}
